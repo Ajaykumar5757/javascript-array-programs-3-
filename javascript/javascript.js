@@ -164,3 +164,54 @@ for(i=0;i<arr5.length;i++){
     }
 }
 console.log(missing);
+
+// Create an array of arrays
+const matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+  ];
+  
+  console.log(matrix);
+
+  // Accessing elements in the array of arrays
+  console.log(matrix[0][0]); // Output: 1
+  console.log(matrix[1][1]); // Output: 5
+  console.log(matrix[2][2]); // Output: 9
+  
+  // Creating an array of arrays using a loop
+  const rows = 3;
+  const cols = 4;
+  const matrix2 = [];
+  for (let i = 0; i < rows; i++) {
+    matrix2[i] = [];
+    for (let j = 0; j < cols; j++) {
+      matrix2[i][j] = i * cols + j;
+    }
+  }
+  
+  console.log(matrix2);
+
+  // Create an array of arrays
+const matrix1 = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+  ];
+  
+  // Convert array of arrays to array of objects
+  const objects = matrix1.map((row) => {
+    return {
+      id: row[0],
+      name: row[1],
+      age: row[2]
+    };
+  });
+  
+  console.log(objects);
+
+  
+  // Alternatively, you can use destructuring to make the code more concise
+  const objects2 = matrix1.map(([id, name, age]) => ({ id, name, age }));
+  
+  console.log(objects2);
